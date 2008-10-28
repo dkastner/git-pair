@@ -28,7 +28,7 @@ module GitPair
 
         return GitPair::Author.add(@sub_args[0], @sub_args[1], @options)
       when "commit"
-        return GitPair::Commit.commit(@options[:message], @sub_args[0])
+        return GitPair::Commit.commit(@options[:message], @sub_args)
       else
         puts %Q(Usage: #{$0} show)
         puts %Q(Usage: #{$0} add js "John Smith <jsmith@example.com>")
